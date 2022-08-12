@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav-wrapper {
+  width: 99%;
+  height: 70px;
+  margin: 0 auto;
+  position: absolute;
+  box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+  -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+  -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.firstLayout {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.secondLayout {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid red;
+  height: 1080px;
+  background-color: orange;
+}
+
+.thirdLayout {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid red;
+  height: 550px;
+  background-color: purple;
+}
+
+.footer {
+  background-color: black;
+  height: 120px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .App {
+    text-align: center;
+    scroll-behavior: smooth;
+    width: 100%;
+  }
+  .App main {
+    width: 85%;
+    margin: 0 auto;
+    border: 2px solid black;
+  }
+  .App main .nav-wrapper {
+    width: 85%;
+    height: 90px;
+    box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    border: 1px solid black;
+  }
+  .App main .firstLayout {
+    width: 99%;
+    height: 100%;
+    border: 1px solid black;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

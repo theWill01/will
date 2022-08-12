@@ -1,0 +1,484 @@
+$primary: black;
+$border: 2px solid whitesmoke;
+$secondary: #148deb;
+
+@mixin slide {
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+  height: 650px;
+  z-index: 7;
+  position: absolute;
+  transition: width 300ms linear;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+  -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+  -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+}
+
+@mixin bars {
+  background-color: whitesmoke;
+  height: 3px;
+  width: 30px;
+  border-radius: 3px;
+  box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+  -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+  -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+}
+
+.menu:hover > div {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  border-top: 2px solid whitesmoke;
+  border-bottom: 2px solid black;
+  font-size: x-large;
+  text-decoration: none;
+  text-align: center;
+  height: 30px;
+  width: 140px;
+  overflow: hidden;
+  color: whitesmoke;
+  margin: 0 auto;
+  margin-left: 5px;
+  font-family: "MochiyPopOne-Regular";
+  font-size: medium;
+
+  h3 {
+    margin: 0 auto;
+  }
+
+  ::first-letter {
+    color: black;
+  }
+}
+
+.socials {
+  min-width: 90px;
+  display: flex;
+  max-height: 40px;
+  align-items: center;
+  justify-content: space-between;
+
+  .socials-icon {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    .socialsIcon {
+      width: 90%;
+      height: 90%;
+    }
+  }
+
+  .socials-icon:active {
+    background-color: #1167ee;
+  }
+}
+
+@media only screen and(max-width: 599px) {
+  .navbar {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+ 
+
+    .menu {
+      border: $border;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+
+      .bar1 {
+        @include bars;
+        transform: rotateZ(0deg);
+        transition: transform 200ms linear;
+      }
+
+      .bar2 {
+        @include bars;
+        margin-top: 3px;
+        transform: rotateZ(0deg);
+        transition: transform 200ms linear;
+      }
+
+      .bar3 {
+        @include bars;
+        margin-top: 3px;
+      }
+
+      .bar4 {
+        @include bars;
+        width: 25px;
+        transform: rotateZ(-60deg);
+        transition: transform 200ms linear;
+        margin-left: -8px;
+        margin-top: -2px;
+        position: absolute;
+      }
+
+      .bar5 {
+        @include bars;
+        width: 25px;
+        transform: rotateZ(60deg);
+        transition: transform 200ms linear;
+        margin-left: 8px;
+      }
+
+      .bar6 {
+        @include bars;
+        width: 17px;
+        transition: width 200ms linear;
+      }
+    }
+
+    .logo {
+      border-top: 2px solid whitesmoke;
+      border-bottom: 2px solid black;
+      font-size: x-large;
+      text-decoration: none;
+      height: 30px;
+      overflow: hidden;
+      color: whitesmoke;
+      margin: 0 auto;
+      font-family: "MochiyPopOne-Regular";
+      font-size: medium;
+      h3 {
+        margin: 0 auto;
+      }
+
+      ::first-letter {
+        color: black;
+      }
+    }
+
+    .dp {
+      border: $border;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 10px;
+      overflow: hidden
+    }
+
+    .open {
+      @include slide;
+
+      width: 0;
+    }
+
+    .close {
+      @include slide;
+
+      width: 80%;
+    }
+
+    .navLinks {
+      display: block;
+      width: 90%;
+      height: 290px;
+      position: absolute;
+      margin: 360px auto;
+      padding: 10px;
+      .nav {
+        border-bottom: 1px solid whitesmoke;
+        width: 99%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        margin-bottom: 5px;
+        font-family: "MochiyPopOne-Regular";
+        font-size: small;
+
+        img{
+          height: 20px;
+          width: 20px;
+        }
+      }
+
+      .socials {
+        width: 60%;
+        height: 40px;
+        padding: 10px;
+        margin: 135px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .socials-icon {
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+          -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+          -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+          .socialsIcon {
+            width: 90%;
+            height: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /*landscape tablets*/
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 99%;
+    margin: 0 auto;
+
+    .menu {
+      display: none;
+    }
+
+    .logo {
+      border-top: 2px solid whitesmoke;
+      border-bottom: 2px solid black;
+      font-size: x-large;
+      text-decoration: none;
+      text-align: center;
+      height: 60%;
+      width: 140px;
+      overflow: hidden;
+      color: whitesmoke;
+      margin: 0 auto;
+      margin-left: 5px;
+      font-family: "MochiyPopOne-Regular";
+      font-size: medium;
+
+
+      h3 {
+        margin: 0 auto;
+      }
+
+      ::first-letter {
+        color: black;
+      }
+    }
+
+    .open {
+      max-width: 64%;
+      display: flex;
+      min-height: 60%;
+      align-items: center;
+      padding-left: 10px;
+      margin-left: 25px;
+      overflow: hidden;
+
+      .navLinks {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        .nav {
+          border-bottom: 1px solid whitesmoke;
+          width: 70px;
+          height: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          color: whitesmoke;
+          margin-right: 10px;
+          font-family: "Rubik-VariableFont_wght";
+          font-size: medium;
+          font-weight: bold;
+
+          img {
+            display: none;
+          }
+        }
+
+        .socials {
+          min-width: 120px;
+          display: flex;
+          min-height: 40px;
+          align-items: center;
+          justify-content: space-between;
+
+          padding: 10px;
+          .socials-icon {
+            background-color: whitesmoke;
+            border-radius: 50%;
+            height: 28px;
+            width: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+            -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+            -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+            .socialsIcon {
+              width: 90%;
+              height: 90%;
+            }
+          }
+
+          .socials-icon:hover {
+            background-color: #1167ee;
+          }
+        }
+      }
+    }
+
+    .dp {
+      border: 2px solid whitesmoke;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      right: 1.5%;
+      margin-left: 5px;
+            overflow: hidden;
+      box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /*laptops and desktops*/
+
+  .navbar {
+    width: 100%;
+    height: 100%;
+
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+    .menu {
+      display: none;
+    }
+.logo {
+      border-top: 2px solid whitesmoke;
+      border-bottom: 2px solid black;
+      font-size: x-large;
+      text-decoration: none;
+      text-align: center;
+      height: 30px;
+      width: 140px;
+      overflow: hidden;
+      color: whitesmoke;
+      margin: 0 auto;
+      margin-left: 5px;
+      font-family: "MochiyPopOne-Regular";
+      font-size: medium;
+
+
+      h3 {
+        margin: 0 auto;
+      }
+
+      ::first-letter {
+        color: black;
+      }
+    }
+
+
+     .open {
+      max-width: 64%;
+      display: flex;
+      min-height: 60%;
+      align-items: center;
+      padding-left: 10px;
+      margin-left: 25px;
+      overflow: hidden;
+
+      .navLinks {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        .nav {
+          border-bottom: 1px solid whitesmoke;
+          width: 70px;
+          height: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          color: whitesmoke;
+          margin-right: 10px;
+          font-family: "Rubik-VariableFont_wght";
+          font-size: medium;
+          font-weight: bold;
+
+          img {
+            display: none;
+          }
+        }
+
+        .socials {
+          min-width: 120px;
+          display: flex;
+          min-height: 40px;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px;
+          .socials-icon {
+            background-color: whitesmoke;
+            border-radius: 50%;
+            height: 28px;
+            width: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+            -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+            -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+            .socialsIcon {
+              width: 80%;
+              height: 80%;
+            }
+          }
+
+          .socials-icon:hover {
+            background-color: #1167ee;
+          }
+        }
+      }
+    }
+
+    .dp {
+      border: 2px solid whitesmoke;
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+      right: 22px;
+            overflow: hidden;
+    }
+  }
+}
+
+

@@ -1,0 +1,628 @@
+$color: #1167ee;
+
+@mixin ripples {
+  height: 110px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+@mixin mid {
+  width: 60px;
+  height: 60px;
+  margin: 150px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin before {
+  /* //rotated squre */
+  background-color: #1167ee;
+  width: 8px;
+  height: 8px;
+  z-index: 2;
+  -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin after {
+  /* //green glow */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 2px;
+  height: 2px;
+  z-index: 1;
+  -webkit-box-shadow: 0 0 50px 30px rgba(72, 170, 72, 0.3);
+  box-shadow: 0 0 50px 30px rgba(72, 170, 72, 0.3);
+  -webkit-animation: home_hero_item_hints_glow 2s
+    cubic-bezier(0.25, 0.1, 0.2, 1) infinite;
+  animation: home_hero_item_hints_glow 2s cubic-bezier(0.25, 0.1, 0.2, 1)
+    infinite;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.first {
+  overflow: hidden;
+  height: 100%;
+
+  .banner {
+    height: 100%;
+    position: relative;
+    #bgImg {
+      height: 100%;
+    }
+
+    .hero {
+      position: absolute;
+      top: 110px;
+      left: 3%;
+
+      background-color: #1167ee;
+      font-family: "Outfit-Medium";
+      color: whitesmoke;
+      padding: 4px;
+      box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    }
+
+    .card {
+      position: absolute;
+      border-radius: 8px;
+      height: 300px;
+      width: 60%;
+      top: 150px;
+      left: 3%;
+      background-color: #1167ee;
+      font-family: "Outfit-Medium";
+      font-size: small;
+      text-align: start;
+      color: whitesmoke;
+      overflow: hidden;
+      padding: 2px;
+      box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+
+      .about {
+        width: 100%;
+        height: 25px;
+        background-color: whitesmoke;
+        color: black;
+        text-align: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+        -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+        -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      }
+    }
+
+    .connect {
+      top: 380px;
+      left: 10%;
+      z-index: 5;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      position: absolute;
+      background-color: black;
+      width: 56%;
+      color: whitesmoke;
+      height: 25px;
+      padding: 4px;
+      margin-top: 20px;
+      font-family: "MochiyPopOne-Regular";
+      font-size: small;
+      text-align: center;
+      box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    }
+
+    .card2 {
+      position: absolute;
+      border-radius: 8px;
+      height: 130px;
+      width: 150px;
+      top: 200px;
+      left: 61%;
+      background-color: whitesmoke;
+      font-family: "Rubik-MediumItalic";
+      color: black;
+      font-size: small;
+      font-weight: lighter;
+      overflow: hidden;
+      box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+
+      .skills {
+        background-color: #1167ee;
+        height: 20px;
+        width: 100%;
+        color: whitesmoke;
+      }
+
+      ul {
+        width: 90%;
+        height: 85%;
+        list-style-position: inside;
+        text-align: start;
+        li {
+          display: list-item;
+
+          list-style-type: disc;
+        }
+      }
+    }
+  }
+}
+.belt {
+  height: 40px;
+  width: 100%;
+  margin-top: -20px;
+  z-index: 5;
+  text-align: center;
+  font-family: "RubikMarkerHatch-Regular";
+
+  h4 {
+    width: 180px;
+    margin: 8px auto;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+  }
+}
+.second {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 40px auto;
+  width: 290px;
+  height: 290px;
+  box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+  -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+  -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+
+  .title {
+    border: 1px solid black;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $color;
+    box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .meat {
+    border-radius: 50%;
+    width: 70%;
+    height: 70%;
+    border-radius: 8px;
+    font-family: "MochiyPopOne-Regular";
+    font-size: small;
+    text-align: start;
+  }
+
+  .code {
+    width: 160px;
+    height: 30px;
+    background-color: $color;
+    color: antiquewhite;
+    border-radius: 8px;
+    font-family: "MochiyPopOne-Regular";
+    font-size: small;
+
+    box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+  }
+}
+
+.third {
+  height: 100%;
+
+  .contact {
+    height: 100%;
+    padding: 20px;
+    .contact-form {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+
+      .leg {
+        margin-left: 15px;
+        color: $color;
+        font-family: "Rubik-MediumItalic";
+        font-size: small;
+      }
+      .input {
+        border: 1px dashed $color;
+        border-radius: 8px;
+        height: 70px;
+        width: 90%;
+        margin-bottom: 6px;
+
+        .inputClass {
+          border: 1px solid black;
+          border-radius: 8px;
+          height: 90%;
+          width: 90%;
+          padding: 5px;
+          font-size: small;
+          box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+          -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+          -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+        }
+      }
+
+      .msg {
+        border: 1px dashed $color;
+        border-radius: 8px;
+        width: 90%;
+        margin-bottom: 8px;
+
+        .msgInput {
+          border: 1px solid black;
+          border-radius: 8px;
+          height: 90%;
+          width: 90%;
+          padding: 5px;
+          font-size: small;
+          box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+          -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+          -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+        }
+      }
+
+      .button {
+        border: 1px solid black;
+        max-width: 150px;
+        height: 30px;
+        font-family: "MochiyPopOne-Regular";
+        font-size: small;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        background-color: $color;
+        color: #fff;
+        padding: 5px;
+        box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+        -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+        -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+      }
+    }
+  }
+}
+
+.map {
+  position: relative;
+}
+
+@-webkit-keyframes home_hero_item_hints_glow {
+  0% {
+    -webkit-box-shadow: 0 0 30px 5px #48aa48;
+    box-shadow: 0 0 30px 5px #48aa48;
+  }
+  70% {
+    -webkit-box-shadow: 0 0 70px 50px rgba(72, 170, 72, 0);
+    box-shadow: 0 0 70px 50px rgba(72, 170, 72, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 50px rgba(72, 170, 72, 0);
+    box-shadow: 0 0 0 50px rgba(72, 170, 72, 0);
+  }
+}
+
+@keyframes home_hero_item_hints_glow {
+  0% {
+    -webkit-box-shadow: 0 0 30px 5px #48aa48;
+    box-shadow: 0 0 30px 5px #48aa48;
+  }
+  70% {
+    -webkit-box-shadow: 0 0 70px 50px rgba(72, 170, 72, 0);
+    box-shadow: 0 0 70px 50px rgba(72, 170, 72, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 50px rgba(72, 170, 72, 0);
+    box-shadow: 0 0 0 50px rgba(72, 170, 72, 0);
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .second {
+    width: 100%;
+    height: 100%;
+  }
+
+  .third {
+    width: 100%;
+    height: 100%;
+
+    .map {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .second {
+    width: 99%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .third {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    .map {
+      height: 40%;
+      width: 100%;
+
+      .ripple1 {
+        @include ripples;
+        margin-top: 80px;
+        margin-left: 90px;
+
+        .mid {
+          @include mid;
+        }
+      }
+
+      .ripple1 .mid::before {
+        @include before;
+      }
+
+      .ripple1 .mid::after {
+        @include after;
+      }
+
+      .ripple2 {
+        @include ripples;
+        margin-top: 180px;
+        margin-left: 300px;
+
+        .mid {
+          @include mid;
+        }
+      }
+
+      .ripple2 .mid::before {
+        @include before;
+      }
+
+      .ripple2 .mid::after {
+        @include after;
+      }
+
+      .ripple3 {
+        @include ripples;
+        margin-top: 80px;
+        margin-left: 399px;
+
+        .mid {
+          @include mid;
+        }
+      }
+
+      .ripple3 .mid::before {
+        @include before;
+      }
+
+      .ripple3 .mid::after {
+        @include after;
+      }
+
+      .ripple4 {
+        @include ripples;
+        margin-top: 110px;
+        margin-left: 369px;
+
+        .mid {
+          @include mid;
+        }
+      }
+
+      .ripple4 .mid::before {
+        @include before;
+      }
+
+      .ripple4 .mid::after {
+        @include after;
+      }
+
+      .ripple5 {
+        @include ripples;
+        margin-top: 210px;
+        margin-left: 319px;
+
+        .mid {
+          @include mid;
+        }
+      }
+
+      .ripple5 .mid::before {
+        @include before;
+      }
+
+      .ripple5 .mid::after {
+        @include after;
+      }
+
+      .ripple6 {
+        @include ripples;
+        margin-top: 110px;
+        margin-left: 169px;
+
+        .mid {
+          @include mid;
+        }
+      }
+
+      .ripple6 .mid::before {
+        @include before;
+      }
+
+      .ripple6 .mid::after {
+        @include after;
+      }
+
+      .ripple7 {
+        @include ripples;
+        margin-top: 30px;
+        margin-left: 189px;
+
+        .mid {
+          @include mid;
+        }
+      }
+
+      .ripple7 .mid::before {
+        @include before;
+      }
+
+      .ripple7 .mid::after {
+        @include after;
+      }
+    }
+
+    .contact {
+      width: 99%;
+      height: 59%;
+  
+    }
+  }
+}
+
+@media only screen and (min-width: 922px) {
+  .first {
+    height: 100%;
+
+    .bg {
+      height: 100%;
+    }
+  }
+  .third {
+    .inner {
+      display: flex;
+
+      .map {
+        width: 60%;
+        height: 90%;
+
+        .ripple1 {
+          @include ripples;
+          margin-top: 40px;
+          margin-left: 60px;
+
+          .mid {
+            @include mid;
+          }
+        }
+
+        .ripple1 .mid::before {
+          @include before;
+        }
+
+        .ripple1 .mid::after {
+          @include after;
+        }
+
+        .ripple2 {
+          @include ripples;
+          margin-top: 140px;
+          margin-left: 260px;
+
+          .mid {
+            @include mid;
+          }
+        }
+
+        .ripple2 .mid::before {
+          @include before;
+        }
+
+        .ripple2 .mid::after {
+          @include after;
+        }
+
+        .ripple3 {
+          @include ripples;
+          margin-top: 40px;
+          margin-left: 369px;
+
+          .mid {
+            @include mid;
+          }
+        }
+
+        .ripple3 .mid::before {
+          @include before;
+        }
+
+        .ripple3 .mid::after {
+          @include after;
+        }
+
+        #map {
+          height: 400px;
+        }
+      }
+
+      .contact {
+        width: 40%;
+        .contact-form {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

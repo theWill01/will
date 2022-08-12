@@ -1,0 +1,339 @@
+.menu:hover > div {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+@media only screen and (max-width: 599px) {
+  /*landscape tablets*/
+  .navbar {
+    width: 97%;
+    height: 90%;
+    border: 1px solid white;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  .navbar .menu {
+    border: 2px solid rgba(55, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar .menu .bar1 {
+    border: 1px solid white;
+    height: 3px;
+    width: 30px;
+    transform: rotateZ(0deg);
+    transition: transform 200ms linear;
+    border-radius: 3px;
+  }
+  .navbar .menu .bar2 {
+    border: 1px solid white;
+    height: 3px;
+    width: 30px;
+    margin-top: 3px;
+    transform: rotateZ(0deg);
+    transition: transform 200ms linear;
+    border-radius: 3px;
+  }
+  .navbar .menu .bar3 {
+    border: 1px solid white;
+    height: 3px;
+    width: 30px;
+    margin-top: 3px;
+    border-radius: 3px;
+  }
+  .navbar .menu .bar4 {
+    border: 1px solid white;
+    height: 3px;
+    width: 25px;
+    transform: rotateZ(-60deg);
+    transition: transform 200ms linear;
+    margin-left: -8px;
+    margin-top: -2px;
+    position: absolute;
+    border-radius: 3px;
+  }
+  .navbar .menu .bar5 {
+    height: 3px;
+    width: 25px;
+    transform: rotateZ(60deg);
+    transition: transform 200ms linear;
+    border: 1px solid white;
+    margin-left: 8px;
+    border-radius: 3px;
+  }
+  .navbar .menu .bar6 {
+    height: 3px;
+    width: 17px;
+    border: 1px solid white;
+    transition: width 200ms linear;
+    border-radius: 3px;
+  }
+  .navbar .logo {
+    border-top: 2px solid white;
+    border-bottom: 2px solid red;
+    font-size: x-large;
+    text-decoration: none;
+    height: 60%;
+    overflow: hidden;
+    color: white;
+    margin-left: 10%;
+  }
+  .navbar .logo h3 {
+    margin: 0 auto;
+  }
+  .navbar .logo ::first-letter {
+    color: red;
+  }
+  .navbar .dp {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+  }
+  .navbar .open {
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+    height: 650px;
+    z-index: 7;
+    position: absolute;
+    transition: width 300ms linear;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    width: 0;
+  }
+  .navbar .close {
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+    height: 650px;
+    z-index: 7;
+    position: absolute;
+    transition: width 300ms linear;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -webkit-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    -moz-box-shadow: -1px 2px 6px 0px rgba(95, 38, 109, 0.75);
+    width: 80%;
+  }
+  .navbar .navLinks {
+    display: block;
+    border: 1px solid white;
+    max-height: 80%;
+    width: 90%;
+    position: absolute;
+    margin: 360px auto;
+    padding: 10px;
+  }
+  .navbar .navLinks .nav {
+    border: 2px solid rgba(55, 255, 255, 0.3);
+    width: 99%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: snow;
+    margin-bottom: 5px;
+  }
+  .navbar .navLinks .socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 50px;
+  }
+  .navbar .navLinks .socials .socials-icon {
+    border: 1px solid red;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+  .navbar .navLinks .socials .socials-icon .socialsIcon {
+    width: 90%;
+    height: 90%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /*landscape tablets*/
+  .navbar {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    width: 100%;
+    height: 99%;
+  }
+  .navbar .logo {
+    border-top: 2px solid white;
+    border-bottom: 2px solid red;
+    font-size: x-large;
+    text-decoration: none;
+    height: 60%;
+    overflow: hidden;
+    color: white;
+  }
+  .navbar .logo h3 {
+    margin: 0 auto;
+  }
+  .navbar .logo ::first-letter {
+    color: red;
+  }
+  .navbar .dp {
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 1.5%;
+  }
+  .navbar .open {
+    border: 1px solid yellow;
+    max-width: 64%;
+    display: flex;
+    min-height: 60%;
+    align-items: center;
+    padding-left: 10px;
+    margin-left: 25px;
+    overflow: hidden;
+  }
+  .navbar .open .navLinks {
+    display: flex;
+  }
+  .navbar .open .navLinks .nav {
+    border: 1px solid white;
+    width: 90px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 10px;
+  }
+  .navbar .open .navLinks .nav img {
+    display: none;
+  }
+  .navbar .open .navLinks .socials {
+    min-width: 110px;
+    border: 1px solid red;
+    display: flex;
+    max-height: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar .open .navLinks .socials .socials-icon {
+    border: 1px solid red;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+  }
+  .navbar .open .navLinks .socials .socials-icon .socialsIcon {
+    width: 90%;
+    height: 90%;
+  }
+}
+@media screen and (min-width: 922px) {
+  /*laptops and desktops*/
+  .navbar {
+    width: 97%;
+    height: 90%;
+    border: 1px solid blue;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  .navbar .menu {
+    display: none;
+  }
+  .navbar .logo {
+    border-top: 2px solid white;
+    border-bottom: 2px solid red;
+    text-decoration: none;
+    height: 40%;
+    width: 120px;
+    color: white;
+  }
+  .navbar .logo h3 {
+    margin: 0 auto;
+  }
+  .navbar .logo ::first-letter {
+    color: red;
+  }
+  .navbar .dp {
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    right: 22px;
+  }
+  .navbar .open {
+    border: 1px solid yellow;
+    min-width: 40%;
+    display: flex;
+    min-height: 60%;
+    align-items: center;
+    padding-left: 10px;
+    margin-left: 180px;
+  }
+  .navbar .open .navLinks {
+    display: flex;
+  }
+  .navbar .open .navLinks .nav {
+    border: 1px solid white;
+    width: 90px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 10px;
+  }
+  .navbar .open .navLinks .nav img {
+    display: none;
+  }
+  .navbar .open .navLinks .socials {
+    min-width: 110px;
+    border: 1px solid red;
+    display: flex;
+    max-height: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar .open .navLinks .socials .socials-icon {
+    border: 1px solid red;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+  }
+  .navbar .open .navLinks .socials .socials-icon .socialsIcon {
+    width: 90%;
+    height: 90%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .open {
+    margin-left: 500px;
+    border: 1px solid green;
+  }
+}
+
+/*# sourceMappingURL=Nav.css.map */
