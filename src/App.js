@@ -1,50 +1,54 @@
 import React, { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./App.scss";
 import Nav from "./components/Nav";
-import FirstLayout from "./components/FirstLayout";
-import SecondLayout from "./components/SecondLayout";
-import ThirdLayout from "./components/ThirdLayout";
-import Footer from "./components/Footer";
-
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
-  const [scroll, setScroll] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
-    };
-    window.addEventListener("scroll", onScroll);
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
-
   return (
     <div className="App">
+      <main className="w-full h-full flex align-middle justify-center">
+        <section className="box flex">
+          <div className="anchor1 flex justify-between flex-col">
+            <Link to="#" className="git">
+              <h3> GitHub</h3>
+            </Link>
+            <Link to="#">
+              <h3>LinkedIn</h3>
+            </Link>
+          </div>
 
-      <main>
-        <header className={scroll ? "scrolled" : "nav-wrapper"}>
-          <Nav />
-        </header>
+          <div className="container">
+            <div className="anchor2 flex justify-between">
+              <Link to="/">
+                <h3>Will Albert</h3>
+              </Link>
+              <Link to="#" className="twitter">
+                <h3> Twitter</h3>
+              </Link>
+            </div>
+            <div className="content flex">
+         
+              <div className="navigation">
+                <Nav />
+              </div>
+              <div className="head">
+                <h1>Hello, i'm Will'</h1>
+              </div>
+              <div className="display">
+                <Routes>
+                  <Route path="/" element={<About />} />
 
-        <section className="firstLayout" id="home">
-          <FirstLayout />
-        </section>
-        <section className="secondLayout" id="pro">
-          <SecondLayout />
-        </section>
-        <section className="thirdLayout" id="contact">
-          <ThirdLayout />
-        </section>
+                  <Route path="/projects" element={<Projects />} />
 
-        <section className="footer" >
-          <Footer />
+                  <Route path="/contact" element={<Contact />} />
+                </Routes>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>
