@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Right from "../assets/images/right-arrow.png";
+import emailjs from "@emailjs/browser";
 export default function Contact() {
   const [isIn, setIsIn] = useState(false);
 
   const [inputs, setInputs] = useState({
-    fullName: "",
-    email: "",
+    user_name: "",
+    user_email: "",
     message: "",
   });
 
@@ -24,12 +25,26 @@ export default function Contact() {
         message: inputs.message,
       },
     ];
+
+    emailjs
+      .sendForm(
+        "portfolio_service",
+        "contact_form",
+        formData,
+        "3v9gWjsroqSjdntsT"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   }
 
   useEffect(() => {
     setIsIn(true);
-
-
   }, []);
   return (
     <div className="contact">
@@ -43,7 +58,7 @@ export default function Contact() {
           <input
             type="text"
             placeholder="full name"
-            name="fullName"
+            name="user_name"
             value={inputs.fullName}
             onChange={handleChange}
           />
@@ -55,7 +70,7 @@ export default function Contact() {
           <input
             type="email"
             placeholder="email"
-            name="email"
+            name="user_email"
             value={inputs.email}
             onChange={handleChange}
           />
@@ -71,7 +86,7 @@ export default function Contact() {
           />
         </fieldset>
         <Link className="btn" to="#" onClick={submit}>
-          <h5 >LET'S CONNECT</h5>
+          <h5>LET'S CONNECT</h5>
           <img className="right" src={Right} alt="*" />
         </Link>
       </form>
