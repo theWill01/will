@@ -1,16 +1,468 @@
-.about{
+.about {
   width: 100%;
   height: 100%;
 
+  .current {
+    width: 99%;
 
-
-  .page_content{
-     border: 1px solid white;
-    width: 320px;
-    height: 390px;
     top: 40%;
+    position: relative;
+    font-size: small;
+    font-weight: 300;
+  }
+
+  .first {
+    width: 59%;
+
+    top: 40%;
+    position: relative;
+    font-size: small;
+    font-weight: 300;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(15px);
+
+    h1 {
+      font-size: xx-large;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-top: 10px;
+    }
+  }
+}
+
+.projects {
+  //  border: 1px solid black;
+  position: absolute;
+  top: 40%;
+  width: 80%;
+  height: 50%;
+
+  .title {
+    font-size: xx-large;
+    line-height: normal;
+    font-weight: 300;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(15px);
+
+    position: relative;
+  }
+
+  .subTitle {
+    font-size: medium;
+    font-weight: 250;
+    font-weight: 300;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(25px);
+
     position: relative;
   }
 }
 
+.contact {
 
+  position: absolute;
+  top: 40%;
+  width: 86%;
+  height: 50%;
+
+  .ad {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(15px);
+    font-size: small;
+    font-weight: 300;
+    position: relative;
+  }
+
+  .ad2 {
+    font-size: small;
+    font-weight: 300;
+    position: relative;
+  }
+
+  form {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5%;
+
+    .btn {
+      border: 1px solid gray;
+      position: relative;
+      top: 10px;
+      width: 140px;
+      height: 30px;
+      border-radius: 3px;
+      font-weight: 300px;
+      font-size: small;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .right {
+      $size: calc(60px * 0.4);
+      width: $size;
+      height: $size;
+    }
+  }
+
+  fieldset {
+    border: 1px solid gray;
+    height: 60px;
+    width: 90%;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  .msg {
+    height: 180px;
+  }
+
+  legend {
+    font-size: small;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+
+  input {
+    font-size: small;
+    width: 99%;
+    height: 100%;
+    outline: none;
+  }
+
+  textarea {
+    font-size: small;
+    height: 95%;
+    width: 99%;
+    outline: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+.contact {
+
+  position: absolute;
+  top: 40%;
+  width: 56%;
+  height: 50%;
+
+  .ad {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(15px);
+    font-size: small;
+    font-weight: 300;
+    position: relative;
+  }
+
+  .ad2 {
+    font-size: small;
+    font-weight: 300;
+    position: relative;
+  }
+
+  form {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5%;
+
+    .btn {
+      border: 1px solid gray;
+      position: relative;
+      top: 10px;
+      width: 140px;
+      height: 30px;
+      border-radius: 3px;
+      font-weight: 300px;
+      font-size: small;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .right {
+      $size: calc(60px * 0.4);
+      width: $size;
+      height: $size;
+    }
+  }
+
+  fieldset {
+    border: 1px solid gray;
+    height: 60px;
+    width: 90%;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  .msg {
+    height: 180px;
+  }
+
+  legend {
+    font-size: small;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+
+  input {
+    font-size: small;
+    width: 99%;
+    height: 100%;
+    outline: none;
+  }
+
+  textarea {
+    font-size: small;
+    height: 95%;
+    width: 99%;
+    outline: none;
+  }
+}
+}
+
+
+@media only screen and (min-width: 922px) {
+.contact {
+
+  position: absolute;
+  top: 40%;
+  width: 56%;
+  height: 50%;
+
+  .ad {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(15px);
+    font-size: small;
+    font-weight: 300;
+    position: relative;
+  }
+
+  .ad2 {
+    font-size: small;
+    font-weight: 300;
+    position: relative;
+  }
+
+  form {
+    width: 70%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5%;
+
+    .btn {
+      border: 1px solid gray;
+      position: relative;
+      top: 10px;
+      width: 140px;
+      height: 30px;
+      border-radius: 3px;
+      font-weight: 300px;
+      font-size: small;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .right {
+      $size: calc(60px * 0.4);
+      width: $size;
+      height: $size;
+    }
+  }
+
+  fieldset {
+    border: 1px solid gray;
+    height: 60px;
+    width: 90%;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  .msg {
+    height: 180px;
+  }
+
+  legend {
+    font-size: small;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+
+  input {
+    font-size: small;
+    width: 99%;
+    height: 100%;
+    outline: none;
+  }
+
+  textarea {
+    font-size: small;
+    height: 95%;
+    width: 99%;
+    outline: none;
+  }
+}
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+.about {
+  width: 100%;
+  height: 100%;
+
+  .current {
+    width: 99%;
+
+    top: 60%;
+    position: relative;
+    font-size: small;
+    font-weight: 300;
+  }
+
+  .first {
+    width: 49%;
+
+    top: 60%;
+    position: relative;
+    font-size: small;
+    font-weight: 300;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(15px);
+
+    h1 {
+      font-size: xx-large;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-top: 10px;
+    }
+  }
+}
+
+.projects {
+
+  position: absolute;
+  top: 60%;
+  width: 80%;
+  height: 50%;
+
+  .title {
+    font-size: xx-large;
+    line-height: normal;
+    font-weight: 300;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(15px);
+
+    position: relative;
+  }
+
+  .subTitle {
+    font-size: medium;
+    font-weight: 250;
+    font-weight: 300;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(25px);
+
+    position: relative;
+  }
+}
+
+.contact {
+
+  position: absolute;
+  top: 43%;
+  width: 56%;
+  height: 50%;
+
+  .ad {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(15px);
+    font-size: small;
+    font-weight: 300;
+    position: relative;
+  }
+
+  .ad2 {
+    font-size: small;
+    font-weight: 300;
+    position: relative;
+  }
+
+  form {
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5%;
+
+    .btn {
+      border: 1px solid gray;
+      position: relative;
+      top: 10px;
+      width: 140px;
+      height: 30px;
+      border-radius: 3px;
+      font-weight: 300px;
+      font-size: small;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .right {
+      $size: calc(60px * 0.4);
+      width: $size;
+      height: $size;
+    }
+  }
+
+  fieldset {
+    border: 1px solid gray;
+    height: 60px;
+    width: 90%;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  .msg {
+    height: 180px;
+  }
+
+  legend {
+    font-size: small;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+
+  input {
+    font-size: small;
+    width: 99%;
+    height: 100%;
+    outline: none;
+  }
+
+  textarea {
+    font-size: small;
+    height: 95%;
+    width: 99%;
+    outline: none;
+  }
+}
+}

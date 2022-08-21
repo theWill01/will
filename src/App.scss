@@ -1,99 +1,76 @@
 .App {
   width: 100%;
   height: 100vh;
-  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
-  main {
-    border: 1px solid red;
-  }
-}
 
-.ripple {
-  border: 1px solid red;
-  border-radius: 2px;
-  width: 2px;
-  height: 2px;
-  left: 40%;
-  animation: rip 6s infinite ease-in-out;
-  z-index: -11;
-  position: absolute;
-}
-
-.ripple::before{
-  position: absolute;
-  left: 10px;
-  top: 5px;
-  animation-delay: .2s;
-    animation: rip 6s infinite ease-in-out;
-}
-
-@keyframes rip {
-  0% {
-    box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent, 0 0 0 0 transparent,
-      0 0 0 0 transparent;
-  }
-
-  15% {
-    box-shadow: 0 0 0 0 #fff, 
-    0 0 0 0 rgba(255, 255, 255, 04),
-     0 0 0 0 #fff,
-      0 0 0 0 rgba(0, 0, 0, 0.09);
-  }
-
-  100% {
-    box-shadow: 0 0 40px 200px transparent, 
-    0 0 10px 210px transparent,
-      0 0 30px 220px transparent, 0 0 5px 230px transparent;
-  }
 }
 
 .box {
   width: 100%;
   height: 100%;
-  border: 1px solid green;
-  align-items: center;
+  border: 1px solid black;
   .anchor1 {
-    width: 5%;
-    height: 95%;
-    border: 1px solid black;
-    font-family: "MochiyPopOne-Regular";
+    width: 4%;
+    height: 98%;
+
+    font-weight: 300;
     font-size: small;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 
-    h3 {
-      rotate: -90deg;
-    }
+    .anchors {
+      height: 80px;
+      width: 100%;
 
-    .git {
-      margin-top: 55px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .git {
+        position: absolute;
+        top: 38%;
+        rotate: -90deg;
+      }
+
+      .linkedIn {
+        position: absolute;
+        rotate: -90deg;
+
+        width: 80px;
+      }
     }
   }
 
   .container {
-    border: 1px solid blue;
-    width: 90%;
-    height: 95.3%;
+    width: 92%;
+    height: 98%;
+  
     .anchor2 {
-      width: 99%;
-      height: 3%;
-      border: 1px solid black;
-      font-family: "MochiyPopOne-Regular";
+      width: 100%;
+      height: 2%;
+
+      font-weight: 300;
       font-size: small;
     }
 
     .content {
-      border: 1px solid yellow;
+      border: 1px solid black;
       width: 100%;
-      height: 97%;
-
+      height: 98%;
+      padding: 5px;
       .navigation {
-        margin-left: 50%;
-        margin-top: 135px;
-        height: 340px;
+        margin-top: 105px;
+        height: 120px;
         width: 130px;
-        border: 1px solid black;
+
         position: absolute;
         z-index: 10;
+        right: 5%;
       }
 
       .head {
@@ -101,13 +78,268 @@
         z-index: 5;
         width: 75%;
         height: 25%;
-        border: 1px solid white;
+        font-weight: 300;
+      }
+    }
+
+    .display {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .box {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    .anchor1 {
+      width: 2.4%;
+      height: 98%;
+
+      font-weight: 300;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      .anchors {
+        height: 80px;
+        width: 97%;
+
+        position: relative;
+        display: flex;
+
+        .git {
+          position: absolute;
+          top: 38%;
+          rotate: -90deg;
+
+        }
+
+        .linkedIn {
+          position: absolute;
+          rotate: -90deg;
+      
+          width: 80px;
+        }
+      }
+    }
+
+    .container {
+      width: 95%;
+      height: 98%;
+
+      .anchor2 {
+        width: 100%;
+        height: 2%;
+
+        font-weight: 300;
+        font-size: 15px;
+      }
+
+      .content {
+        border: 1px solid black;
+        width: 100%;
+        height: 98%;
+        padding: 5px;
+        .navigation {
+          margin-top: 105px;
+          height: 120px;
+          width: 130px;
+
+          position: absolute;
+          z-index: 10;
+          right: 5%;
+        }
+
+        .head {
+          position: absolute;
+          z-index: 5;
+          width: 75%;
+          height: 25%;
+          font-weight: 300;
+        }
       }
 
       .display {
         width: 100%;
         height: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 922px) {
+  .App {
+    width: 100%;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+  }
+  .box {
+    width: 80%;
+    height: 100%;
+    border: 1px solid black;
+    .anchor1 {
+      width: 2.4%;
+      height: 98%;
+
+      font-weight: 300;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      .anchors {
+        height: 80px;
+        width: 97%;
+
+        position: relative;
+        display: flex;
+
+        .git {
+          position: absolute;
+          top: 38%;
+          rotate: -90deg;
+
+        }
+
+        .linkedIn {
+          position: absolute;
+          rotate: -90deg;
+   
+          width: 80px;
+        }
+      }
+    }
+
+    .container {
+      width: 95%;
+      height: 98%;
+ 
+      .anchor2 {
+        width: 100%;
+        height: 2%;
+
+        font-weight: 300;
+        font-size: 15px;
+      }
+
+      .content {
         border: 1px solid black;
+        width: 100%;
+        height: 98%;
+        padding: 5px;
+        .navigation {
+          margin-top: 105px;
+          height: 120px;
+          width: 130px;
+
+          position: absolute;
+          z-index: 10;
+          right: 5%;
+        }
+
+        .head {
+          position: absolute;
+          z-index: 5;
+          width: 75%;
+          height: 25%;
+          font-weight: 300;
+        }
+      }
+
+      .display {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .box {
+    width: 80%;
+    height: 100%;
+    border: 1px solid black;
+
+    .anchor1 {
+      width: 2%;
+      height: 98%;
+
+      font-weight: 300;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-direction: column;
+
+      .anchors {
+        height: 80px;
+        width: 97%;
+ 
+        position: relative;
+        display: flex;
+
+        .git {
+          position: absolute;
+          top: 45%;
+          rotate: -90deg;
+  
+        }
+
+        .linkedIn {
+          position: absolute;
+          rotate: -90deg;
+
+          width: 80px;
+        }
+      }
+    }
+
+    .container {
+      width: 96%;
+      height: 98%;
+
+      .anchor2 {
+        width: 100%;
+        height: 4%;
+
+        font-weight: 300;
+        font-size: 15px;
+      }
+
+      .content {
+        border: 1px solid black;
+        width: 100%;
+        height: 96%;
+        padding: 5px;
+        .navigation {
+          margin-top: 105px;
+          height: 120px;
+          width: 130px;
+
+          position: absolute;
+          z-index: 10;
+          right: 5%;
+        }
+
+        .head {
+          position: absolute;
+          z-index: 5;
+          width: 75%;
+          height: 25%;
+          font-weight: 300;
+        }
+      }
+
+      .display {
+        width: 100%;
+        height: 100%;
       }
     }
   }

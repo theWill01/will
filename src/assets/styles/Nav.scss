@@ -1,33 +1,170 @@
-.nav {
-  border: 1px solid black;
-  height: 60px;
-  width: 120px;
-  font-family: "RubikMarkerHatch-Regular";
-}
-
-.link {
-  font-size: larger;
+@mixin active {
+  font-size: xx-large;
   color: black;
-  text-shadow:0 2px 0 #8ed2d4,2px 3px 15px rgba(0,0,0,0.5);
   position: relative;
-  animation: shake 1s infinite;
+  z-index: 10;
+  animation: bubble 0.2s linear;
+  animation-delay: 5px;
+  transition: all 0.2s linear;
+  font-weight: 300;
+  text-shadow: 3px 3px 3px #ababab;
+}
+
+@mixin inActive {
+ font-weight: 400;
+  font-size: large;
+  font-weight: lighter;
+  position: absolute;
+  transition: all 0.2s linear;
+  right: 40px;
+}
+
+.nav {
+  height: 170px;
+  width: 120px;
+}
+
+.about-active {
+  @include active;
+  transform: translateY(-90px);
+
+}
+
+.about-inActive {
+  @include inActive;
+  transform: translateY(25px);
+
 }
 
 
+.projects-active {
+  @include active;
+  transform: translateY(-90px);
+}
 
-@keyframes shake {
+.p-inActive {
+  @include inActive;
+  transform: translateY(54px);
+}
+
+.contact-active {
+  @include active;
+  transform: translateY(-90px);
+}
+
+.c-inActive {
+  @include inActive;
+  transform: translateY(10px);
+}
+
+@keyframes bubble {
   0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10px);
+    font-size: large;
+    text-shadow: 1px 1px 1px #ababab;
   }
 
   100% {
-    transform: translateX(0);
+    font-size: xx-large;
+    text-shadow: 3px 3px 3px #ababab;
   }
 }
 
-.none {
-  color: white;
+
+@media  only screen and (min-width: 600px){
+  .about-inActive {
+  @include inActive;
+  transform: translateY(25px);
+  top: 40%;
+
+}
+
+.p-inActive {
+  @include inActive;
+  transform: translateY(54px);
+   top: 40%;
+}
+
+.c-inActive {
+  @include inActive;
+  transform: translateY(10px);
+   top: 99%;
+}
+}
+
+@media only screen and (min-width: 922px){
+  .about-active {
+  @include active;
+  transform: translateY(-90px);
+    right: 40px;
+}
+
+.about-inActive {
+  @include inActive;
+  transform: translateY(25px);
+    right: 90px;
+}
+
+
+.projects-active {
+  @include active;
+  transform: translateY(-90px);
+      right: 70px;
+}
+
+.p-inActive {
+  @include inActive;
+  transform: translateY(54px);
+      right: 90px;
+}
+
+.contact-active {
+  @include active;
+  transform: translateY(-90px);
+      right: 70px;
+}
+
+.c-inActive {
+  @include inActive;
+  transform: translateY(10px);
+      right: 90px;
+}
+}
+
+@media only screen and (min-width: 1200px){
+  .about-active {
+  @include active;
+  transform: translateY(-90px);
+    right: 70px;
+}
+
+.about-inActive {
+  @include inActive;
+  transform: translateY(25px);
+    right: 120px;
+}
+
+
+.projects-active {
+  @include active;
+  transform: translateY(-90px);
+      right: 100px;
+}
+
+.p-inActive {
+  @include inActive;
+  transform: translateY(54px);
+      right: 120px;
+}
+
+.contact-active {
+  @include active;
+  transform: translateY(-90px);
+      right: 90px;
+}
+
+.c-inActive {
+  @include inActive;
+  transform: translateY(10px);
+      right: 120px;
+}
 }

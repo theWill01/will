@@ -8,16 +8,21 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 function App() {
+
+
+
+
+
   return (
     <div className="App">
       <main className="w-full h-full flex align-middle justify-center">
         <section className="box flex">
-          <div className="anchor1 flex justify-between flex-col">
-            <Link to="#" className="git">
-              <h3> GitHub</h3>
+          <div className="anchor1">
+            <Link to="#" className="anchors">
+              <h3 className="git"> GitHub</h3>
             </Link>
-            <Link to="#">
-              <h3>LinkedIn</h3>
+            <Link to="#" className="anchors">
+              <h3 className="linkedIn">Linked-in</h3>
             </Link>
           </div>
 
@@ -31,12 +36,12 @@ function App() {
               </Link>
             </div>
             <div className="content flex">
-         
               <div className="navigation">
                 <Nav />
               </div>
               <div className="head">
-                <h1>Hello, i'm Will'</h1>
+                <h1 className="flex text-2xl">Will Albert</h1>
+                <p>Developer & Designer</p>
               </div>
               <div className="display">
                 <Routes>
