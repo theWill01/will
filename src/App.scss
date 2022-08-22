@@ -6,7 +6,6 @@
   justify-content: center;
   margin: 0;
   padding: 0;
-
 }
 
 .box {
@@ -24,22 +23,22 @@
     flex-direction: column;
 
     .anchors {
-      height: 80px;
-      width: 100%;
-
+      height: 40px;
+      width: 80px;
+      border: 1px solid black;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+       rotate: 360deg;
+          position: absolute;
       .git {
-        position: absolute;
+     
         top: 38%;
-        rotate: -90deg;
+       
       }
 
       .linkedIn {
-        position: absolute;
-        rotate: -90deg;
 
         width: 80px;
       }
@@ -49,7 +48,7 @@
   .container {
     width: 92%;
     height: 98%;
-  
+
     .anchor2 {
       width: 100%;
       height: 2%;
@@ -97,34 +96,12 @@
     .anchor1 {
       width: 2.4%;
       height: 98%;
-
       font-weight: 300;
       font-size: 15px;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
 
-      .anchors {
-        height: 80px;
-        width: 97%;
-
-        position: relative;
-        display: flex;
-
-        .git {
-          position: absolute;
-          top: 38%;
-          rotate: -90deg;
-
-        }
-
-        .linkedIn {
-          position: absolute;
-          rotate: -90deg;
-      
-          width: 80px;
-        }
-      }
     }
 
     .container {
@@ -178,7 +155,6 @@
 
     margin: 0;
     padding: 0;
-
   }
   .box {
     width: 80%;
@@ -205,13 +181,12 @@
           position: absolute;
           top: 38%;
           rotate: -90deg;
-
         }
 
         .linkedIn {
           position: absolute;
           rotate: -90deg;
-   
+
           width: 80px;
         }
       }
@@ -220,7 +195,7 @@
     .container {
       width: 95%;
       height: 98%;
- 
+
       .anchor2 {
         width: 100%;
         height: 2%;
@@ -281,7 +256,7 @@
       .anchors {
         height: 80px;
         width: 97%;
- 
+
         position: relative;
         display: flex;
 
@@ -289,7 +264,6 @@
           position: absolute;
           top: 45%;
           rotate: -90deg;
-  
         }
 
         .linkedIn {
