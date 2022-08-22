@@ -8,29 +8,25 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 function App() {
-
-
-
-
-
   return (
     <div className="App">
       <main className="w-full h-full flex align-middle justify-center">
         <section className="box flex">
           <div className="anchor1">
-            <Link to="#" className="anchors">
-              <h3 className="git"> GitHub</h3>
+            <Link to="#">
+              <div className="anchors">
+                <h3 className="git"> GitHub</h3>
+              </div>
             </Link>
-            <Link to="#" className="anchors">
-              <h3 className="linkedIn">Linked-in</h3>
+            <Link to="#">
+              <div className="anchors">
+                <h3 className="linkedIn">Linked-in</h3>
+              </div>
             </Link>
           </div>
 
           <div className="container">
             <div className="anchor2 flex justify-between">
-              <Link to="/">
-                <h3>Will Albert</h3>
-              </Link>
               <Link to="#" className="twitter">
                 <h3> Twitter</h3>
               </Link>
