@@ -19,10 +19,15 @@ function App() {
         <section className="box flex">
           <div className="anchor1">
             <Link to="#" className="anchors">
-              <h3 className="git"> GitHub</h3>
+              <span className="git">
+                <h3 > GitHub</h3>
+              </span>
             </Link>
             <Link to="#" className="anchors">
-              <h3 className="linkedIn">Linked-in</h3>
+              <span className="linkedIn">
+           
+                <h3>Linked-in</h3>
+              </span>
             </Link>
           </div>
 
