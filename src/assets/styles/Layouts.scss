@@ -1,3 +1,37 @@
+@mixin inputBoxStyling {
+  width: 95%;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+}
+
+@mixin input {
+  font-size: small;
+  width: 100%;
+  position: absolute;
+  padding: 10px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.8em;
+}
+
+@mixin spans {
+  font-size: 0.9em;
+  position: absolute;
+  left: 10px;
+  padding: 0 10px;
+  pointer-events: none;
+  color: gray;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
 .about {
   width: 100%;
   height: 100%;
@@ -62,7 +96,6 @@
 }
 
 .contact {
-
   position: absolute;
   top: 40%;
   width: 86%;
@@ -90,6 +123,85 @@
     position: relative;
     top: 5%;
 
+    .inputBox {
+      @include inputBoxStyling;
+      height: 54px;
+
+      input {
+        @include input;
+        height: 50px;
+      }
+
+      input:valid ~ span,
+      input:focus ~ span {
+        color: black;
+        transform: translateX(10px) translateY(-23px);
+        padding: 0 10px;
+        font-size: 0.55em;
+        padding: 10px;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+        background-color: #fff;
+        letter-spacing: 0.2em;
+        height: 4px;
+        margin-bottom: 6px;
+        border-radius: 2px;
+      }
+
+      :nth-child(2) input:valid ~ span,
+      :nth-child(2) input:focus ~ span {
+        padding: 10px;
+        text-align: center;
+        border-radius: 2px;
+        height: 4px;
+      }
+
+      input:valid,
+      input:focus {
+        border: 1px solid black;
+      }
+      span {
+        @include spans;
+      }
+    }
+
+    .textBox {
+      @include inputBoxStyling;
+      height: 90px;
+
+      textarea {
+        @include input;
+      }
+
+      textarea:valid,
+      textarea:focus {
+        border: 1px solid black;
+      }
+
+      textarea:valid ~ span,
+      textarea:focus ~ span {
+        color: black;
+        transform: translateX(10px) translateY(-40px);
+        border-radius: 2px;
+        padding: 0 10px;
+        font-size: 0.55em;
+        padding: 10px;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+        background-color: #fff;
+        letter-spacing: 0.2em;
+        height: 4px;
+        margin-bottom: 6px;
+      }
+
+      span {
+        @include spans;
+      
+      }
+    }
+
     .btn {
       border: 1px solid gray;
       position: relative;
@@ -110,359 +222,321 @@
       width: $size;
       height: $size;
     }
-  }
-
-  fieldset {
-    border: 1px solid gray;
-    height: 60px;
-    width: 90%;
-    padding: 5px;
-    border-radius: 8px;
-  }
-  .msg {
-    height: 180px;
-  }
-
-  legend {
-    font-size: small;
-    font-weight: 400;
-    margin-left: 10px;
-  }
-
-  input {
-    font-size: small;
-    width: 99%;
-    height: 100%;
-    outline: none;
-  }
-
-  textarea {
-    font-size: small;
-    height: 95%;
-    width: 99%;
-    outline: none;
   }
 }
 
 @media only screen and (min-width: 600px) {
-.contact {
+  .contact {
+    position: absolute;
+    top: 40%;
+    width: 56%;
+    height: 50%;
 
-  position: absolute;
-  top: 40%;
-  width: 56%;
-  height: 50%;
-
-  .ad {
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(15px);
-    font-size: small;
-    font-weight: 300;
-    position: relative;
-  }
-
-  .ad2 {
-    font-size: small;
-    font-weight: 300;
-    position: relative;
-  }
-
-  form {
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 5%;
-
-    .btn {
-      border: 1px solid gray;
-      position: relative;
-      top: 10px;
-      width: 140px;
-      height: 30px;
-      border-radius: 3px;
-      font-weight: 300px;
+    .ad {
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(15px);
       font-size: small;
+      font-weight: 300;
+      position: relative;
+    }
+
+    .ad2 {
+      font-size: small;
+      font-weight: 300;
+      position: relative;
+    }
+
+    form {
+      height: 90%;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
+      position: relative;
+      top: 5%;
+
+      .btn {
+        border: 1px solid gray;
+        position: relative;
+        top: 10px;
+        width: 140px;
+        height: 30px;
+        border-radius: 3px;
+        font-weight: 300px;
+        font-size: small;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+      }
+
+      .right {
+        $size: calc(60px * 0.4);
+        width: $size;
+        height: $size;
+      }
+    }
+
+    fieldset {
+      border: 1px solid gray;
+      height: 60px;
+      width: 90%;
       padding: 5px;
+      border-radius: 8px;
+    }
+    .msg {
+      height: 180px;
     }
 
-    .right {
-      $size: calc(60px * 0.4);
-      width: $size;
-      height: $size;
+    legend {
+      font-size: small;
+      font-weight: 400;
+      margin-left: 10px;
+    }
+
+    input {
+      font-size: small;
+      width: 99%;
+      height: 100%;
+      outline: none;
+    }
+
+    textarea {
+      font-size: small;
+      height: 95%;
+      width: 99%;
+      outline: none;
     }
   }
-
-  fieldset {
-    border: 1px solid gray;
-    height: 60px;
-    width: 90%;
-    padding: 5px;
-    border-radius: 8px;
-  }
-  .msg {
-    height: 180px;
-  }
-
-  legend {
-    font-size: small;
-    font-weight: 400;
-    margin-left: 10px;
-  }
-
-  input {
-    font-size: small;
-    width: 99%;
-    height: 100%;
-    outline: none;
-  }
-
-  textarea {
-    font-size: small;
-    height: 95%;
-    width: 99%;
-    outline: none;
-  }
 }
-}
-
 
 @media only screen and (min-width: 922px) {
-.contact {
+  .contact {
+    position: absolute;
+    top: 40%;
+    width: 56%;
+    height: 50%;
 
-  position: absolute;
-  top: 40%;
-  width: 56%;
-  height: 50%;
-
-  .ad {
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(15px);
-    font-size: small;
-    font-weight: 300;
-    position: relative;
-  }
-
-  .ad2 {
-    font-size: small;
-    font-weight: 300;
-    position: relative;
-  }
-
-  form {
-    width: 70%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 5%;
-
-    .btn {
-      border: 1px solid gray;
-      position: relative;
-      top: 10px;
-      width: 140px;
-      height: 30px;
-      border-radius: 3px;
-      font-weight: 300px;
+    .ad {
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(15px);
       font-size: small;
+      font-weight: 300;
+      position: relative;
+    }
+
+    .ad2 {
+      font-size: small;
+      font-weight: 300;
+      position: relative;
+    }
+
+    form {
+      width: 70%;
+      height: 90%;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
+      position: relative;
+      top: 5%;
+
+      .btn {
+        border: 1px solid gray;
+        position: relative;
+        top: 10px;
+        width: 140px;
+        height: 30px;
+        border-radius: 3px;
+        font-weight: 300px;
+        font-size: small;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+      }
+
+      .right {
+        $size: calc(60px * 0.4);
+        width: $size;
+        height: $size;
+      }
+    }
+
+    fieldset {
+      border: 1px solid gray;
+      height: 60px;
+      width: 90%;
       padding: 5px;
+      border-radius: 8px;
+    }
+    .msg {
+      height: 180px;
     }
 
-    .right {
-      $size: calc(60px * 0.4);
-      width: $size;
-      height: $size;
+    legend {
+      font-size: small;
+      font-weight: 400;
+      margin-left: 10px;
+    }
+
+    input {
+      font-size: small;
+      width: 99%;
+      height: 100%;
+      outline: none;
+    }
+
+    textarea {
+      font-size: small;
+      height: 95%;
+      width: 99%;
+      outline: none;
     }
   }
-
-  fieldset {
-    border: 1px solid gray;
-    height: 60px;
-    width: 90%;
-    padding: 5px;
-    border-radius: 8px;
-  }
-  .msg {
-    height: 180px;
-  }
-
-  legend {
-    font-size: small;
-    font-weight: 400;
-    margin-left: 10px;
-  }
-
-  input {
-    font-size: small;
-    width: 99%;
-    height: 100%;
-    outline: none;
-  }
-
-  textarea {
-    font-size: small;
-    height: 95%;
-    width: 99%;
-    outline: none;
-  }
 }
-}
-
-
 
 @media only screen and (min-width: 1200px) {
-.about {
-  width: 100%;
-  height: 100%;
-
-  .current {
-    width: 99%;
-
-    top: 60%;
-    position: relative;
-    font-size: small;
-    font-weight: 300;
-  }
-
-  .first {
-    width: 49%;
-
-    top: 60%;
-    position: relative;
-    font-size: small;
-    font-weight: 300;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(15px);
-
-    h1 {
-      font-size: xx-large;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      margin-top: 10px;
-    }
-  }
-}
-
-.projects {
-
-  position: absolute;
-  top: 60%;
-  width: 80%;
-  height: 50%;
-
-  .title {
-    font-size: xx-large;
-    line-height: normal;
-    font-weight: 300;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(15px);
-
-    position: relative;
-  }
-
-  .subTitle {
-    font-size: medium;
-    font-weight: 250;
-    font-weight: 300;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(25px);
-
-    position: relative;
-  }
-}
-
-.contact {
-
-  position: absolute;
-  top: 43%;
-  width: 56%;
-  height: 50%;
-
-  .ad {
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(15px);
-    font-size: small;
-    font-weight: 300;
-    position: relative;
-  }
-
-  .ad2 {
-    font-size: small;
-    font-weight: 300;
-    position: relative;
-  }
-
-  form {
-    width: 60%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 5%;
-
-    .btn {
-      border: 1px solid gray;
-      position: relative;
-      top: 10px;
-      width: 140px;
-      height: 30px;
-      border-radius: 3px;
-      font-weight: 300px;
-      font-size: small;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 5px;
-    }
-
-    .right {
-      $size: calc(60px * 0.4);
-      width: $size;
-      height: $size;
-    }
-  }
-
-  fieldset {
-    border: 1px solid gray;
-    height: 60px;
-    width: 90%;
-    padding: 5px;
-    border-radius: 8px;
-  }
-  .msg {
-    height: 180px;
-  }
-
-  legend {
-    font-size: small;
-    font-weight: 400;
-    margin-left: 10px;
-  }
-
-  input {
-    font-size: small;
-    width: 99%;
+  .about {
+    width: 100%;
     height: 100%;
-    outline: none;
+
+    .current {
+      width: 99%;
+
+      top: 60%;
+      position: relative;
+      font-size: small;
+      font-weight: 300;
+    }
+
+    .first {
+      width: 49%;
+
+      top: 60%;
+      position: relative;
+      font-size: small;
+      font-weight: 300;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(15px);
+
+      h1 {
+        font-size: xx-large;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 10px;
+      }
+    }
   }
 
-  textarea {
-    font-size: small;
-    height: 95%;
-    width: 99%;
-    outline: none;
+  .projects {
+    position: absolute;
+    top: 60%;
+    width: 80%;
+    height: 50%;
+
+    .title {
+      font-size: xx-large;
+      line-height: normal;
+      font-weight: 300;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(15px);
+
+      position: relative;
+    }
+
+    .subTitle {
+      font-size: medium;
+      font-weight: 250;
+      font-weight: 300;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(25px);
+
+      position: relative;
+    }
   }
-}
+
+  .contact {
+    position: absolute;
+    top: 43%;
+    width: 56%;
+    height: 50%;
+
+    .ad {
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(15px);
+      font-size: small;
+      font-weight: 300;
+      position: relative;
+    }
+
+    .ad2 {
+      font-size: small;
+      font-weight: 300;
+      position: relative;
+    }
+
+    form {
+      width: 60%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      top: 5%;
+
+      .btn {
+        border: 1px solid gray;
+        position: relative;
+        top: 10px;
+        width: 140px;
+        height: 30px;
+        border-radius: 3px;
+        font-weight: 300px;
+        font-size: small;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+      }
+
+      .right {
+        $size: calc(60px * 0.4);
+        width: $size;
+        height: $size;
+      }
+    }
+
+    fieldset {
+      border: 1px solid gray;
+      height: 60px;
+      width: 90%;
+      padding: 5px;
+      border-radius: 8px;
+    }
+    .msg {
+      height: 180px;
+    }
+
+    legend {
+      font-size: small;
+      font-weight: 400;
+      margin-left: 10px;
+    }
+
+    input {
+      font-size: small;
+      width: 99%;
+      height: 100%;
+      outline: none;
+    }
+
+    textarea {
+      font-size: small;
+      height: 95%;
+      width: 99%;
+      outline: none;
+    }
+  }
 }

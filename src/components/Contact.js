@@ -4,12 +4,14 @@ import Right from "../assets/images/right-arrow.png";
 import emailjs from "@emailjs/browser";
 export default function Contact() {
   const [isIn, setIsIn] = useState(false);
-
+  const [current, setCurrent] = useState(false);
   const [inputs, setInputs] = useState({
     user_name: "",
     user_email: "",
     message: "",
   });
+
+  const toggle = () => setCurrent((prevCurrent) => !prevCurrent);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -53,38 +55,41 @@ export default function Contact() {
       </p>
 
       <form>
-        <fieldset>
-          <legend>name</legend>
+        <div className="inputBox">
           <input
             type="text"
-            placeholder="full name"
             name="user_name"
             value={inputs.fullName}
             onChange={handleChange}
+            onClick={toggle}
+            required="required"
           />
-        </fieldset>
+          <span>full name</span>
+        </div>
 
-        <fieldset>
-          <legend>email</legend>
-
+        <div className="inputBox">
           <input
             type="email"
-            placeholder="email"
             name="user_email"
             value={inputs.email}
             onChange={handleChange}
+            required="required"
           />
-        </fieldset>
-        <fieldset className="msg">
-          <legend>message</legend>
 
+          <span>email</span>
+        </div>
+        <div className="textBox">
           <textarea
-            placeholder="Leave a message"
             name="message"
             value={inputs.message}
             onChange={handleChange}
+            required="required"
           />
-        </fieldset>
+
+          <span>
+            <h3 >Leave a message</h3>
+          </span>
+        </div>
         <Link className="btn" to="#" onClick={submit}>
           <h5>LET'S CONNECT</h5>
           <img className="right" src={Right} alt="*" />
