@@ -1,38 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Right from "../assets/images/right-arrow.png";
 import emailjs from "@emailjs/browser";
 export default function Contact() {
   const [isIn, setIsIn] = useState(false);
   const [current, setCurrent] = useState(false);
-  const [inputs, setInputs] = useState({
-    user_name: "",
-    user_email: "",
-    message: "",
-  });
+  const form = useRef();
 
   const toggle = () => setCurrent((prevCurrent) => !prevCurrent);
 
-  const handleChange = (e) => {
-    e.preventDefault();
-    setInputs({ ...inputs, [e.target.name]: e.target.value });
-  };
 
-  function submit(e) {
+  function sendEmail(e) {
     e.preventDefault();
-    const formData = [
-      {
-        names: inputs.fullName,
-        email: inputs.email,
-        message: inputs.message,
-      },
-    ];
 
     emailjs
       .sendForm(
         "portfolio_service",
         "contact_form",
-        formData,
+        form.current,
         "3v9gWjsroqSjdntsT"
       )
       .then(
@@ -54,13 +39,13 @@ export default function Contact() {
         i am always open to take on freelance projects{" "}
       </p>
 
-      <form>
+      <form ref={form}>
         <div className="inputBox">
           <input
             type="text"
             name="user_name"
-            value={inputs.fullName}
-            onChange={handleChange}
+      
+   
             onClick={toggle}
             required="required"
           />
@@ -71,8 +56,7 @@ export default function Contact() {
           <input
             type="email"
             name="user_email"
-            value={inputs.email}
-            onChange={handleChange}
+  
             required="required"
           />
 
@@ -81,16 +65,15 @@ export default function Contact() {
         <div className="textBox">
           <textarea
             name="message"
-            value={inputs.message}
-            onChange={handleChange}
+ 
             required="required"
           />
 
           <span>
-            <h3 >Leave a message</h3>
+            <h3>Leave a message</h3>
           </span>
         </div>
-        <Link className="btn" to="#" onClick={submit}>
+        <Link className="btn" to="#" onClick={sendEmail}>
           <h5>LET'S CONNECT</h5>
           <img className="right" src={Right} alt="*" />
         </Link>
