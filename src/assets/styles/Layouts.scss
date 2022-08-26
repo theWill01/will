@@ -182,7 +182,7 @@
       textarea:valid ~ span,
       textarea:focus ~ span {
         color: black;
-        transform: translateX(10px) translateY(-40px);
+        transform: translateX(10px) translateY(-30px);
         border-radius: 2px;
         padding: 0 10px;
         font-size: 0.55em;
@@ -198,7 +198,6 @@
 
       span {
         @include spans;
-      
       }
     }
 
@@ -254,6 +253,20 @@
       position: relative;
       top: 5%;
 
+      .inputBox {
+        @include inputBoxStyling;
+        height: 54px;
+
+        input {
+          @include input;
+          height: 50px;
+        }
+
+        span {
+          @include spans;
+        }
+      }
+
       .btn {
         border: 1px solid gray;
         position: relative;
@@ -274,37 +287,6 @@
         width: $size;
         height: $size;
       }
-    }
-
-    fieldset {
-      border: 1px solid gray;
-      height: 60px;
-      width: 90%;
-      padding: 5px;
-      border-radius: 8px;
-    }
-    .msg {
-      height: 180px;
-    }
-
-    legend {
-      font-size: small;
-      font-weight: 400;
-      margin-left: 10px;
-    }
-
-    input {
-      font-size: small;
-      width: 99%;
-      height: 100%;
-      outline: none;
-    }
-
-    textarea {
-      font-size: small;
-      height: 95%;
-      width: 99%;
-      outline: none;
     }
   }
 }
@@ -339,6 +321,20 @@
       position: relative;
       top: 5%;
 
+      .inputBox {
+        @include inputBoxStyling;
+        height: 54px;
+
+        input {
+          @include input;
+          height: 50px;
+        }
+
+        span {
+          @include spans;
+        }
+      }
+
       .btn {
         border: 1px solid gray;
         position: relative;
@@ -359,37 +355,6 @@
         width: $size;
         height: $size;
       }
-    }
-
-    fieldset {
-      border: 1px solid gray;
-      height: 60px;
-      width: 90%;
-      padding: 5px;
-      border-radius: 8px;
-    }
-    .msg {
-      height: 180px;
-    }
-
-    legend {
-      font-size: small;
-      font-weight: 400;
-      margin-left: 10px;
-    }
-
-    input {
-      font-size: small;
-      width: 99%;
-      height: 100%;
-      outline: none;
-    }
-
-    textarea {
-      font-size: small;
-      height: 95%;
-      width: 99%;
-      outline: none;
     }
   }
 }
@@ -486,6 +451,20 @@
       position: relative;
       top: 5%;
 
+      .inputBox {
+        @include inputBoxStyling;
+        height: 54px;
+
+        input {
+          @include input;
+          height: 50px;
+        }
+
+        span {
+          @include spans;
+        }
+      }
+
       .btn {
         border: 1px solid gray;
         position: relative;
@@ -506,37 +485,6 @@
         width: $size;
         height: $size;
       }
-    }
-
-    fieldset {
-      border: 1px solid gray;
-      height: 60px;
-      width: 90%;
-      padding: 5px;
-      border-radius: 8px;
-    }
-    .msg {
-      height: 180px;
-    }
-
-    legend {
-      font-size: small;
-      font-weight: 400;
-      margin-left: 10px;
-    }
-
-    input {
-      font-size: small;
-      width: 99%;
-      height: 100%;
-      outline: none;
-    }
-
-    textarea {
-      font-size: small;
-      height: 95%;
-      width: 99%;
-      outline: none;
     }
   }
 }
