@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/will/static/css/main.bdcd8531.css",
-    "main.js": "/will/static/js/main.4c962fe1.js",
+    "main.css": "/will/static/css/main.db1106c4.css",
+    "main.js": "/will/static/js/main.aab2c664.js",
     "static/js/787.ee95881d.chunk.js": "/will/static/js/787.ee95881d.chunk.js",
     "static/media/Quicksand-VariableFont_wght.ttf": "/will/static/media/Quicksand-VariableFont_wght.cf52df73d8529b4815ed.ttf",
     "static/media/PoiretOne-Regular.ttf": "/will/static/media/PoiretOne-Regular.9bf109e97f6294c6fe2b.ttf",
     "index.html": "/will/index.html",
-    "main.bdcd8531.css.map": "/will/static/css/main.bdcd8531.css.map",
-    "main.4c962fe1.js.map": "/will/static/js/main.4c962fe1.js.map",
+    "main.db1106c4.css.map": "/will/static/css/main.db1106c4.css.map",
+    "main.aab2c664.js.map": "/will/static/js/main.aab2c664.js.map",
     "787.ee95881d.chunk.js.map": "/will/static/js/787.ee95881d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bdcd8531.css",
-    "static/js/main.4c962fe1.js"
+    "static/css/main.db1106c4.css",
+    "static/js/main.aab2c664.js"
   ]
 }
