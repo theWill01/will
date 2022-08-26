@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.7be2345b.css",
-    "main.js": "/static/js/main.bb51ee41.js",
-    "static/js/787.ee95881d.chunk.js": "/static/js/787.ee95881d.chunk.js",
-    "static/media/Quicksand-VariableFont_wght.ttf": "/static/media/Quicksand-VariableFont_wght.cf52df73d8529b4815ed.ttf",
-    "static/media/PoiretOne-Regular.ttf": "/static/media/PoiretOne-Regular.9bf109e97f6294c6fe2b.ttf",
-    "index.html": "/index.html",
-    "main.7be2345b.css.map": "/static/css/main.7be2345b.css.map",
-    "main.bb51ee41.js.map": "/static/js/main.bb51ee41.js.map",
-    "787.ee95881d.chunk.js.map": "/static/js/787.ee95881d.chunk.js.map"
+    "main.css": "/will/static/css/main.62a84e1c.css",
+    "main.js": "/will/static/js/main.e817f988.js",
+    "static/js/787.ee95881d.chunk.js": "/will/static/js/787.ee95881d.chunk.js",
+    "static/media/Quicksand-VariableFont_wght.ttf": "/will/static/media/Quicksand-VariableFont_wght.cf52df73d8529b4815ed.ttf",
+    "static/media/PoiretOne-Regular.ttf": "/will/static/media/PoiretOne-Regular.9bf109e97f6294c6fe2b.ttf",
+    "index.html": "/will/index.html",
+    "main.62a84e1c.css.map": "/will/static/css/main.62a84e1c.css.map",
+    "main.e817f988.js.map": "/will/static/js/main.e817f988.js.map",
+    "787.ee95881d.chunk.js.map": "/will/static/js/787.ee95881d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7be2345b.css",
-    "static/js/main.bb51ee41.js"
+    "static/css/main.62a84e1c.css",
+    "static/js/main.e817f988.js"
   ]
 }
