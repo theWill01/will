@@ -2,7 +2,7 @@
   "name": "me",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://theWill01.github.io/will",
+  "homepage": "https://will.com",
   "dependencies": {
     "-": "^0.0.1",
     "@emailjs/browser": "^3.6.2",
